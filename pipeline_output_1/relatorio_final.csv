@@ -1,0 +1,4 @@
+Modelo,CV_Outer_Mean,CV_Outer_Std,Holdout_BalAcc,Holdout_Sens,Holdout_Spec,Holdout_AUC,Gap_Inner_Outer,Gap_Generalizacao,Perm_Mean,Perm_pvalor
+SVM_RBF,1.0,0.001,1.0,1.0,1.0,1.0,0.0,-0.0,1.0,1.0
+RandomForest,1.0,0.0,1.0,1.0,1.0,1.0,0.0,-0.0,1.0,1.0
+XGBoost,1.0,0.001,1.0,1.0,1.0,1.0,-0.0,-0.0,0.999,0.0099
