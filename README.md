@@ -213,11 +213,9 @@ The following results were obtained with subject-level LOSO validation.
 
 ### Main benchmark
 
-<<<<<<< HEAD
-=======
+
 ![Benchmark dos Classificadores](assets/Beanchmark_Resultados.png)
 
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 | Model | AUC | Sensitivity | Specificity |
 |---|---:|---:|---:|
 | RandomForest | 0.701 | 0.600 | 0.625 |
@@ -226,11 +224,8 @@ The following results were obtained with subject-level LOSO validation.
 
 ### Confusion matrices
 
-<<<<<<< HEAD
-=======
 ![Matrizes de Confusão](assets/matriz_de_confusão.png)
 
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 - **RandomForest:** 20 TN, 12 FP, 14 FN, 21 TP
 - **SVM_RBF:** 21 TN, 11 FP, 12 FN, 23 TP
 - **XGBoost:** 17 TN, 15 FP, 14 FN, 21 TP
@@ -247,11 +242,8 @@ The following results were obtained with subject-level LOSO validation.
 
 The notebook also relates predicted AD probability to cognitive measures.
 
-<<<<<<< HEAD
-=======
 ![Cognitive Data Analysis](assets/Cognitive_data.png)
 
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 ### Observed correlations
 
 - `moca_total` vs. `P(AD)`: **rho = -0.354**, **p = 0.0101**, **n = 52**
@@ -293,11 +285,8 @@ The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO fold
 
 ### Interpretation
 
-<<<<<<< HEAD
-=======
 ![SHAP Summary Plot](assets/Shap_Summary.png)
 
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 The most important features point to a classic AD-related EEG pattern:
 
 - increased theta activity;
