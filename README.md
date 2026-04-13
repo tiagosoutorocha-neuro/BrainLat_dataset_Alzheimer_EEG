@@ -402,7 +402,3 @@ At the end of execution, the notebooks produce:
 - Run the notebooks in sequence.
 - Make sure the dataset directory contains the required `.set` and `.fdt` files.
 - If `SHAP` is not installed, the explainability section will be skipped until the dependency is added.
-
-## Referência do notebook
-
-Este repositório foi organizado a partir de um fluxo experimental para classificação de Alzheimer vs. HC com EEG, validado por sujeito e orientado para interpretabilidade.
