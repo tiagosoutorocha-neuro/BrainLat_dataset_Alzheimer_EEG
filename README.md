@@ -1,35 +1,33 @@
-# 🧠 Pipeline ML para Detecção de Alzheimer via EEG
+# 🧠 EEG-Based Machine Learning Pipeline for Alzheimer’s Disease Detection
 
-Classificador binário **Alzheimer (AD) vs. Controle Saudável (HC)** baseado em **features espectrais de EEG**, com validação **Leave-One-Subject-Out (LOSO)** e explicabilidade via **SHAP**.
+This repository contains a binary classifier for **Alzheimer’s Disease (AD) vs. Healthy Controls (HC)** based on **EEG spectral features**, evaluated with **Leave-One-Subject-Out (LOSO)** validation and explained with **SHAP**.
 
-Este repositório foi organizado a partir do notebook `Pipeline_ML_Alzheimer_Reorganizado (1).ipynb`, que implementa um fluxo completo:
+The pipeline follows the workflow described in the article below:
 
-1. download/preparo dos dados BrainLat;
-2. pré-processamento do EEG;
-3. extração de features espectrais;
-4. benchmark de modelos de machine learning;
-5. análise de interpretabilidade e relação com cognição.
+https://doi.org/10.1038/s41597-023-02806-8
 
----
+## Overview
 
-## Visão geral
+The goal of this project is to distinguish subjects with Alzheimer’s disease from healthy controls using resting-state EEG. The pipeline was designed to reduce data leakage and to evaluate performance at the **subject level**, not only at the epoch level.
 
-O objetivo do projeto é construir um classificador robusto para distinguir sujeitos com Doença de Alzheimer de controles saudáveis a partir de EEG em repouso. O pipeline foi desenhado para reduzir vazamento de dados e para avaliar desempenho em nível de **sujeito**, e não apenas de época.
+### Main methodological choices
 
-### Principais escolhas metodológicas
-- **Validação LOSO por sujeito**: cada fold deixa um sujeito inteiro para teste.
-- **Normalização feita somente no treino**: evita data leakage.
-- **Predição agregada por sujeito**: a decisão final vem da média das probabilidades das épocas.
-- **Features espectrais consolidadas na literatura**: potência relativa por banda, razões espectrais e entropia espectral.
-- **Explicabilidade**: SHAP, análise de erros e partial dependence plots.
+- **Subject-level LOSO validation:** each fold leaves one complete subject out for testing.
+- **Training-only normalization:** prevents data leakage from test data into scaling.
+- **Subject-level prediction:** the final decision is obtained by averaging epoch probabilities.
+- **Literature-based spectral features:** relative band power, spectral ratios, and spectral entropy.
+- **Explainability:** SHAP, error analysis, and partial dependence plots.
+- **Sanity tests:** permutation testing, leakage auditing, baseline comparison, and feature discriminability checks.
 
 ---
 
-## Estrutura esperada do projeto
+## Repository Structure
 
 ```text
 .
-├── Pipeline_ML_Alzheimer_Reorganizado (1).ipynb
+├── 1_Download_Datatset.ipynb
+├── 2_Preprocessing.ipynb
+├── 3_ML_Models.ipynb
 ├── README.md
 └── Dataset_EEG_Alzheimer/
     ├── dataset_eeg_alzheimer/
@@ -40,17 +38,21 @@ O objetivo do projeto é construir um classificador robusto para distinguir suje
         └── *.fdt
 ```
 
-### Arquivos gerados pelo notebook
+## Expected Output Files
+
+The notebooks generate:
+
 - `eeg_features_brainlat_FULL_normalizado.csv`
 - `eeg_features_brainlat_falhas_normalizado.csv`
 
 ---
 
-## Requisitos
+## Requirements
 
-O notebook foi escrito em Python e usa bibliotecas comuns de ciência de dados e EEG.
+The notebooks were written in Python 3.12.10 and use common scientific and EEG libraries.
 
-### Dependências principais
+### Main dependencies
+
 - `numpy`
 - `pandas`
 - `matplotlib`
@@ -59,21 +61,23 @@ O notebook foi escrito em Python e usa bibliotecas comuns de ciência de dados e
 - `scikit-learn`
 - `xgboost`
 - `shap`
-- `neuroCombat` *(opcional)*
+- `neuroCombat` *(optional)*
 
-### Instalação sugerida
+### Suggested installation
+
 ```bash
 pip install numpy pandas matplotlib seaborn mne scikit-learn xgboost shap neuroCombat
 ```
 
-Se estiver usando Jupyter/Colab, garanta que o kernel tenha acesso à biblioteca `mne` e aos arquivos `.set/.fdt`.
+If you are using Jupyter or Colab, make sure the kernel has access to `mne` and to the `.set/.fdt` files.
 
 ---
 
-## Como usar este repositório
+## How to Use This Repository
 
-### 1) Baixe e organize o BrainLat
-O notebook espera os dados em uma pasta local com esta lógica:
+### 1) Download and organize the BrainLat dataset
+
+The notebooks expect the data in the following local structure:
 
 ```text
 Dataset_EEG_Alzheimer/
@@ -81,61 +85,62 @@ Dataset_EEG_Alzheimer/
 └── dataset_eeg_hc/
 ```
 
-Dentro de cada pasta devem estar os arquivos `*.set` e, idealmente, seus respectivos `*.fdt`.
+Inside each folder, the corresponding `*.set` files should be available, together with their `*.fdt` files when applicable.
 
-### 2) Ajuste os caminhos na célula de configuração
-Na **FASE 0**, altere apenas as variáveis de caminho para o seu ambiente local:
+### 2) Adjust the paths in the configuration cell
 
-- `PASTA_RAIZ`
-- `PASTA_AD`
-- `PASTA_HC`
+In the **configuration phase**, modify only the path variables to match your local environment:
 
-Também revise os caminhos usados na parte de análise cognitiva, caso a estrutura local seja diferente.
+- `ROOT_DIR`
+- `DIR_AD`
+- `DIR_HC`
 
-### 3) Execute o notebook do início ao fim
-A ordem importa:
+If your cognitive data folder is structured differently, also review the paths used in the cognitive analysis section.
 
-1. configuração global;
-2. download/checagem dos dados;
-3. exploração do dataset;
-4. pré-processamento e extração de features;
-5. benchmark de modelos;
-6. explicabilidade e análise de resultados.
+### 3) Run the notebooks in order
 
-### 4) Confira os arquivos de saída
-Ao final, o notebook salva:
-- a base principal com todas as épocas e features;
-- um CSV com falhas de leitura/processamento.
+The recommended execution order is:
+
+1. `1_Download_Datatset.ipynb`
+2. `2_Preprocessing.ipynb`
+3. `3_ML_Models.ipynb`
+
+### 4) Check the generated outputs
+
+At the end, the pipeline saves:
+
+- the main feature dataset with all epochs and extracted features;
+- a CSV file with loading or processing failures.
 
 ---
 
-## Metodologia
+## Methodology
 
-## 1. Pré-processamento do EEG
+## 1. EEG Preprocessing
 
-O pipeline aplica os seguintes passos por arquivo `.set`:
+For each `.set` file, the pipeline performs:
 
-1. **Leitura robusta do EEG**  
-   O código tenta carregar o arquivo EEGLAB e, quando necessário, lida com a dependência do arquivo `.fdt`.
+1. **EEGLAB file loading**  
+   The code attempts to load the EEG recording robustly and handles the `.fdt` dependency when needed.
 
-2. **Re-referência para a média global**  
-   Padroniza o sinal entre canais.
+2. **Average re-referencing**  
+   Standardizes the signal across channels.
 
-3. **Filtro passa-faixa de 0.5 a 45 Hz**  
-   Remove componentes fora da banda de interesse.
+3. **Band-pass filtering from 0.5 to 45 Hz**  
+   Removes frequencies outside the range of interest.
 
-4. **Seleção apenas de canais EEG**  
-   Exclui canais não neuronais como EOG, ECG e similares.
+4. **EEG-only channel selection**  
+   Excludes non-neural channels such as EOG and ECG.
 
-5. **Segmentação em épocas fixas de 4 segundos**  
-   Cada sujeito é dividido em janelas temporais fixas.
+5. **Fixed-length epoching (4 seconds)**  
+   Splits each subject into time windows of equal length.
 
-6. **Normalização por sujeito via RMS global**  
-   O sinal de cada sujeito é escalado para reduzir diferenças globais de amplitude.
+6. **Subject-level RMS normalization**  
+   Scales each subject’s signal to reduce global amplitude differences.
 
-## 2. Extração de features espectrais
+## 2. Spectral Feature Extraction
 
-As features são calculadas com **PSD via Welch** e agregadas por banda. O conjunto final utilizado no modelo é:
+Features are computed using **Welch PSD** and aggregated by band. The final model uses:
 
 - `Rel_Theta_mean`
 - `Rel_Alpha_mean`
@@ -145,101 +150,109 @@ As features são calculadas com **PSD via Welch** e agregadas por banda. O conju
 - `Razao_Theta_Beta`
 - `Spectral_Entropy`
 
-### Interpretação clínica esperada
-- aumento relativo de **theta**: sinal compatível com lentificação cortical;
-- redução de **alpha, beta e gamma**: compatível com disfunção neurofisiológica;
-- aumento das razões **theta/alpha** e **theta/beta**: indicativo de desacoplamento e lentificação;
-- alteração da **entropia espectral**: reflete mudança de complexidade do sinal.
+### Clinical interpretation
+
+- increased **theta** power is consistent with cortical slowing;
+- reduced **alpha, beta, and gamma** power is consistent with neurophysiological dysfunction;
+- increased **theta/alpha** and **theta/beta** ratios are associated with slowing patterns;
+- altered **spectral entropy** reflects reduced signal complexity.
+
+## 3. ML Validation: Subject-Level LOSO
+
+The validation strategy is **Leave-One-Subject-Out (LOSO)**.
+
+### How it works
+
+In each fold:
+
+- one entire subject is held out for testing;
+- all remaining subjects are used for training;
+- `StandardScaler` is fitted only on the training set;
+- the model is trained from scratch;
+- epoch probabilities from the test subject are averaged;
+- the final decision is made at the subject level.
+
+### Why this matters
+
+EEG epochs from the same subject tend to be highly correlated. If epochs from the same subject appear in both train and test sets, performance can be artificially inflated. LOSO provides a much more realistic estimate of generalization.
 
 ---
 
-## 3. Validação ML: LOSO por sujeito
+## Models Evaluated
 
-A validação usada é **Leave-One-Subject-Out (LOSO)**.
-
-### Como funciona
-Em cada fold:
-- um sujeito inteiro é deixado para teste;
-- todos os demais sujeitos entram no treino;
-- o `StandardScaler` é ajustado somente no treino;
-- o modelo é treinado do zero;
-- as probabilidades das épocas do sujeito de teste são médias;
-- a decisão final é feita no nível do sujeito.
-
-### Por que isso é importante
-Em EEG, épocas do mesmo sujeito tendem a ser muito parecidas. Se o mesmo sujeito aparece no treino e no teste, o desempenho pode ficar artificialmente inflado. O LOSO evita esse problema e fornece uma estimativa mais realista da generalização.
-
----
-
-## Modelos avaliados
-
-O notebook compara três classificadores consolidados:
+The notebook compares three standard classifiers:
 
 ### 1. Random Forest
-- robusto a não linearidades;
-- boa interpretabilidade relativa;
-- usado também na etapa de SHAP.
+- robust to nonlinear relationships;
+- relatively interpretable;
+- used for SHAP analysis.
 
-### 2. SVM com kernel RBF
-- adequado para relações não lineares;
-- foi calibrado para produzir probabilidades.
+### 2. SVM with RBF kernel
+- effective for nonlinear decision boundaries;
+- calibrated to produce probabilities.
 
 ### 3. XGBoost
-- modelo de boosting com forte capacidade preditiva;
-- serve como baseline competitivo em dados tabulares.
+- gradient-boosted tree model with strong predictive capacity;
+- competitive baseline for tabular data.
 
 ---
 
-## Resultados
+## Results
 
-Os resultados abaixo foram obtidos na validação LOSO por sujeito.
+The following results were obtained with subject-level LOSO validation.
 
-### Benchmark principal
+### Main benchmark
 
-| Modelo | AUC | Sensibilidade | Especificidade |
+| Model | AUC | Sensitivity | Specificity |
 |---|---:|---:|---:|
 | RandomForest | 0.701 | 0.600 | 0.625 |
 | SVM_RBF | 0.684 | 0.657 | 0.656 |
 | XGBoost | 0.662 | 0.600 | 0.531 |
 
-### Matrizes de confusão
-- **RandomForest**: 20 TN, 12 FP, 14 FN, 21 TP
-- **SVM_RBF**: 21 TN, 11 FP, 12 FN, 23 TP
-- **XGBoost**: 17 TN, 15 FP, 14 FN, 21 TP
+### Confusion matrices
 
-### Leitura prática
-- **RandomForest** teve o melhor AUC global.
-- **SVM_RBF** apresentou o melhor equilíbrio entre sensibilidade e especificidade.
-- **XGBoost** teve a menor especificidade, sugerindo maior tendência a falsos positivos.
+- **RandomForest:** 20 TN, 12 FP, 14 FN, 21 TP
+- **SVM_RBF:** 21 TN, 11 FP, 12 FN, 23 TP
+- **XGBoost:** 17 TN, 15 FP, 14 FN, 21 TP
+
+### Practical interpretation
+
+- **RandomForest** achieved the best overall AUC.
+- **SVM_RBF** showed the best balance between sensitivity and specificity.
+- **XGBoost** had the lowest specificity, suggesting more false positives.
 
 ---
 
-## Análise EEG × cognição
+## EEG × Cognition Analysis
 
-O notebook também cruza a probabilidade de AD com medidas cognitivas.
+The notebook also relates predicted AD probability to cognitive measures.
 
-### Correlações observadas
+### Observed correlations
+
 - `moca_total` vs. `P(AD)`: **rho = -0.354**, **p = 0.0101**, **n = 52**
 - `ifs_total_score` vs. `P(AD)`: **rho = -0.404**, **p = 0.00267**, **n = 53**
 
-### Interpretação
-A relação negativa sugere que escores cognitivos mais altos tendem a aparecer com probabilidades menores de AD, o que é coerente com o comportamento esperado do classificador.
+### Interpretation
 
-### Médias por grupo de erro
-- **FN (AD→HC)**: MoCA média ≈ 16.45; IFS média ≈ 16.67
-- **FP (HC→AD)**: MoCA média ≈ 25.25; IFS média ≈ 21.89
-- **TN (HC→HC)**: MoCA média ≈ 25.80; IFS média ≈ 23.91
-- **TP (AD→AD)**: MoCA média ≈ 17.39; IFS média ≈ 13.05
+The negative relationships suggest that higher cognitive scores tend to be associated with lower AD probability, which is consistent with the expected model behavior.
 
-Isso reforça a ideia de que erros não são aleatórios: os falsos positivos e falsos negativos ocupam perfis cognitivos intermediários ou mais ambíguos.
+### Mean cognitive scores by outcome group
+
+- **FN (AD → HC):** MoCA ≈ 16.45; IFS ≈ 16.67
+- **FP (HC → AD):** MoCA ≈ 25.25; IFS ≈ 21.89
+- **TN (HC → HC):** MoCA ≈ 25.80; IFS ≈ 23.91
+- **TP (AD → AD):** MoCA ≈ 17.39; IFS ≈ 13.05
+
+These values suggest that the mistakes are not random: false positives and false negatives tend to lie in more ambiguous cognitive profiles.
 
 ---
 
-## Explicabilidade com SHAP
+## Explainability with SHAP
 
-A etapa de XAI usa **Random Forest** e agrega os valores SHAP de todos os folds LOSO.
+The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO folds.
 
-### Ranking global de importância SHAP
+### Global SHAP importance ranking
+
 1. `Rel_Theta_mean` — **0.0680**
 2. `Razao_Theta_Alpha` — **0.0660**
 3. `Razao_Theta_Beta` — **0.0601**
@@ -248,73 +261,132 @@ A etapa de XAI usa **Random Forest** e agrega os valores SHAP de todos os folds 
 6. `Rel_Alpha_mean` — **0.0313**
 7. `Spectral_Entropy` — **0.0253**
 
-### Interpretação
-As features mais importantes apontam para um padrão clássico de AD:
-- aumento de theta;
-- aumento das razões theta/alpha e theta/beta;
-- perda de complexidade em bandas mais rápidas.
+### Interpretation
 
-Isso é coerente com a literatura sobre lentificação do EEG em neurodegeneração.
+The most important features point to a classic AD-related EEG pattern:
 
----
+- increased theta activity;
+- increased theta/alpha and theta/beta ratios;
+- reduced complexity in faster frequency bands.
 
-## Discussão
-
-### O que os resultados sugerem
-O pipeline consegue separar AD de HC com desempenho moderado e biologicamente plausível. O fato de as features mais importantes estarem associadas a **theta** e às razões espectrais reforça que o modelo está capturando um fenômeno neurofisiológico consistente, e não apenas ruído estatístico.
-
-### Forças do projeto
-- validação por sujeito, mais rigorosa do que validação por época;
-- pipeline reprodutível e modular;
-- uso de features interpretáveis;
-- análise integrada entre EEG, cognição e explicabilidade.
-
-### Limitações importantes
-- desempenho ainda moderado;
-- o conjunto usa apenas features espectrais resumidas, sem conectividade, temporalidade fina ou deep learning;
-- parte dos arquivos HC falhou por ausência do `.fdt`, o que reduz o conjunto disponível;
-- o corte em 0.5 para decisão binária é simples e pode ser otimizado;
-- os PDPs no notebook são apenas ilustrativos e foram ajustados em todo o conjunto, não devendo ser usados como estimativa final de generalização.
-
-### Possíveis extensões
-- inclusão de conectividade funcional;
-- extração de features por canal ou por região;
-- ajuste de limiar com base em custo clínico;
-- comparação com modelos adicionais;
-- harmonização de domínio entre países/sítios com ComBat;
-- calibração probabilística e análise de confiança.
+This is consistent with the literature on EEG slowing in neurodegeneration.
 
 ---
 
-## Saídas geradas
+## Sanity Tests
 
-Ao final da execução, o notebook produz:
+Before interpreting the model results, the notebook runs four sanity checks to verify that the pipeline is statistically and methodologically sound.
 
-- **CSV principal** com todas as épocas e features;
-- **CSV de falhas** com problemas de leitura/processamento;
-- gráficos de:
-  - distribuição das features;
-  - correlação entre features;
-  - curvas ROC;
-  - matrizes de confusão;
-  - distribuição das probabilidades;
-  - ranking de benchmark;
-  - SHAP global e summary plot;
-  - análise de erros;
+## ST-1. Permutation Label Test
+
+This test checks whether the observed performance is better than chance when subject labels are randomly shuffled.
+
+- Labels are permuted at the **subject level**, not the epoch level.
+- The LOSO pipeline is rerun under the null hypothesis.
+- An empirical p-value is computed from the permutation distribution.
+
+**Purpose:** verify that the classifier is learning real structure rather than artifacts.
+
+## ST-2. Data Leakage Structural Audit
+
+This test checks for leakage in the validation protocol.
+
+It verifies that:
+
+- no subject appears in both train and test folds;
+- the scaler is fitted only on the training set;
+- training-set class balance behaves consistently across folds.
+
+**Purpose:** confirm that subject-level LOSO is truly leakage-free.
+
+## ST-3. Naive Baseline Comparison
+
+This test compares the best model against trivial baselines:
+
+- **MajorityClass**
+- **Stratified**
+- **Chance level (AUC = 0.5)**
+
+**Purpose:** show that the model is meaningfully better than no-learning strategies.
+
+## ST-4. Feature Discriminability Audit
+
+This test evaluates whether the extracted features actually separate AD and HC.
+
+It uses:
+
+- **Cohen’s d** for effect size;
+- **Mann–Whitney U test** with Bonferroni correction;
+- **within-subject stability ratio** to compare epoch noise against subject-level signal.
+
+**Purpose:** validate that the input features carry discriminative information before XAI interpretation.
+
+---
+
+## Discussion
+
+### What the results suggest
+
+The pipeline is able to separate AD from HC with moderate and biologically plausible performance. The fact that the most important features are associated with **theta** and spectral ratios supports the idea that the model is capturing meaningful neurophysiological slowing rather than pure statistical noise.
+
+### Strengths of the project
+
+- subject-level validation;
+- reproducible and modular pipeline;
+- interpretable features;
+- integration of EEG, cognition, and explainability;
+- explicit sanity testing.
+
+### Important limitations
+
+- performance is still moderate;
+- the model uses only compact spectral features, not connectivity, temporal structure, or deep learning;
+- some HC recordings failed to load because the `.fdt` file was missing;
+- the 0.5 decision threshold is simple and could be optimized;
+- the partial dependence plots are illustrative and were trained on the full dataset, so they should not be treated as the final generalization estimate.
+
+### Possible extensions
+
+- functional connectivity features;
+- channel-wise or region-wise features;
+- threshold tuning based on clinical cost;
+- additional classifiers;
+- domain harmonization with ComBat;
+- probability calibration and uncertainty analysis.
+
+---
+
+## Generated Outputs
+
+At the end of execution, the notebooks produce:
+
+- the main feature CSV;
+- a failure log CSV;
+- plots for:
+  - feature distributions;
+  - feature correlations;
+  - ROC curves;
+  - confusion matrices;
+  - probability distributions;
+  - benchmark ranking;
+  - global SHAP summaries;
+  - error analysis;
   - partial dependence plots;
-  - relação EEG × cognição.
+  - EEG vs. cognition relationships.
 
 ---
 
-## Observações de reprodução
+## Reproducibility Notes
 
-- Use `SEED = 42` para manter os experimentos mais estáveis.
-- Execute o notebook inteiro em ordem.
-- Verifique se o diretório dos dados contém os arquivos `.set` e `.fdt`.
-- Se `SHAP` não estiver instalado, a parte de explicabilidade será ignorada até você instalar a dependência.
+- Use `SEED = 42` to keep stochastic components stable.
+- Run the notebooks in sequence.
+- Make sure the dataset directory contains the required `.set` and `.fdt` files.
+- If `SHAP` is not installed, the explainability section will be skipped until the dependency is added.
 
 ---
 
-## Referência do notebook
+## Citation
 
-Este repositório foi organizado a partir de um fluxo experimental para classificação de Alzheimer vs. HC com EEG, validado por sujeito e orientado para interpretabilidade.
+If you use this project in a report or paper, please cite the BrainLat dataset article:
+
+https://doi.org/10.1038/s41597-023-02806-8
