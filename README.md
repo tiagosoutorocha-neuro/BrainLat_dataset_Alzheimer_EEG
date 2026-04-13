@@ -1,4 +1,4 @@
-# 🧠 EEG-Based Machine Learning Pipeline for Alzheimer’s Disease Detection
+# EEG-Based Machine Learning Pipeline for Alzheimer’s Disease Detection
 
 This repository contains a binary classifier for **Alzheimer’s Disease (AD) vs. Healthy Controls (HC)** based on **EEG spectral features**, evaluated with **Leave-One-Subject-Out (LOSO)** validation and explained with **SHAP**.
 
