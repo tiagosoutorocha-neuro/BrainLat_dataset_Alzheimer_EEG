@@ -2,9 +2,13 @@
 
 This repository contains a binary classifier for **Alzheimer’s Disease (AD) vs. Healthy Controls (HC)** based on **EEG spectral features**, evaluated with **Leave-One-Subject-Out (LOSO)** validation and explained with **SHAP**.
 
-The pipeline follows the workflow described in the article below:
+This repository implements the following workflow based on the data from this article: https://doi.org/10.1038/s41597-023-02806-8
 
-https://doi.org/10.1038/s41597-023-02806-8
+1. Download/preparation of the BrainLat dataset (https://www.synapse.org/Synapse:syn51549340/files/);
+2. Pre-processing of EEG signals;
+3. Extraction of spectral features;
+4. Benchmarking of machine learning models (SVM-RBF, Random Forest, XGBoost);
+5. Interpretability analysis and relationship with cognitive data.
 
 ## Overview
 
@@ -29,6 +33,12 @@ The goal of this project is to distinguish subjects with Alzheimer’s disease f
 ├── 2_Preprocessing.ipynb
 ├── 3_ML_Models.ipynb
 ├── README.md
+├── assets/
+│   ├── Beanchmark_Resultados.png
+│   ├── matriz_de_confusão.png
+│   ├── Cognitive_data.png
+│   ├── Importancia_Reatures_SHAP.png
+│   └── Shap_Summary.png
 └── Dataset_EEG_Alzheimer/
     ├── dataset_eeg_alzheimer/
     │   ├── *.set
@@ -203,6 +213,11 @@ The following results were obtained with subject-level LOSO validation.
 
 ### Main benchmark
 
+<<<<<<< HEAD
+=======
+![Benchmark dos Classificadores](assets/Beanchmark_Resultados.png)
+
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 | Model | AUC | Sensitivity | Specificity |
 |---|---:|---:|---:|
 | RandomForest | 0.701 | 0.600 | 0.625 |
@@ -211,6 +226,11 @@ The following results were obtained with subject-level LOSO validation.
 
 ### Confusion matrices
 
+<<<<<<< HEAD
+=======
+![Matrizes de Confusão](assets/matriz_de_confusão.png)
+
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 - **RandomForest:** 20 TN, 12 FP, 14 FN, 21 TP
 - **SVM_RBF:** 21 TN, 11 FP, 12 FN, 23 TP
 - **XGBoost:** 17 TN, 15 FP, 14 FN, 21 TP
@@ -227,6 +247,11 @@ The following results were obtained with subject-level LOSO validation.
 
 The notebook also relates predicted AD probability to cognitive measures.
 
+<<<<<<< HEAD
+=======
+![Cognitive Data Analysis](assets/Cognitive_data.png)
+
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 ### Observed correlations
 
 - `moca_total` vs. `P(AD)`: **rho = -0.354**, **p = 0.0101**, **n = 52**
@@ -252,6 +277,11 @@ These values suggest that the mistakes are not random: false positives and false
 The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO folds.
 
 ### Global SHAP importance ranking
+<<<<<<< HEAD
+=======
+
+![Importância das Features SHAP](assets/Importancia_Features _SHAP.png) 
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 
 1. `Rel_Theta_mean` — **0.0680**
 2. `Razao_Theta_Alpha` — **0.0660**
@@ -263,6 +293,11 @@ The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO fold
 
 ### Interpretation
 
+<<<<<<< HEAD
+=======
+![SHAP Summary Plot](assets/Shap_Summary.png)
+
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 The most important features point to a classic AD-related EEG pattern:
 
 - increased theta activity;
@@ -382,6 +417,7 @@ At the end of execution, the notebooks produce:
 - Run the notebooks in sequence.
 - Make sure the dataset directory contains the required `.set` and `.fdt` files.
 - If `SHAP` is not installed, the explainability section will be skipped until the dependency is added.
+<<<<<<< HEAD
 
 ---
 
@@ -390,3 +426,5 @@ At the end of execution, the notebooks produce:
 If you use this project in a report or paper, please cite the BrainLat dataset article:
 
 https://doi.org/10.1038/s41597-023-02806-8
+=======
+>>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
