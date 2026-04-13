@@ -1,11 +1,11 @@
 ﻿grupo,arquivo,caminho,erro,traceback
 HC,s6_sub-100013_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100013\eeg\s6_sub-100013_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100013\eeg\s6_sub-100013_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -23,12 +23,12 @@ HC,s6_sub-100013_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100013\eeg\s6_sub-100013_rs_eeg.fdt not found.
 "
 HC,s6_sub-100019_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100019\eeg\s6_sub-100019_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100019\eeg\s6_sub-100019_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -46,12 +46,12 @@ HC,s6_sub-100019_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100019\eeg\s6_sub-100019_rs_eeg.fdt not found.
 "
 HC,s6_sub-100023_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100023\eeg\s6_sub-100023_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100023\eeg\s6_sub-100023_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -69,12 +69,12 @@ HC,s6_sub-100023_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100023\eeg\s6_sub-100023_rs_eeg.fdt not found.
 "
 HC,s6_sub-100025_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100025\eeg\s6_sub-100025_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100025\eeg\s6_sub-100025_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -92,12 +92,12 @@ HC,s6_sub-100025_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100025\eeg\s6_sub-100025_rs_eeg.fdt not found.
 "
 HC,s6_sub-100027_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100027\eeg\s6_sub-100027_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100027\eeg\s6_sub-100027_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -115,12 +115,12 @@ HC,s6_sub-100027_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100027\eeg\s6_sub-100027_rs_eeg.fdt not found.
 "
 HC,s6_sub-100032_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100032\eeg\s6_sub-100032_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100032\eeg\s6_sub-100032_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -138,12 +138,12 @@ HC,s6_sub-100032_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100032\eeg\s6_sub-100032_rs_eeg.fdt not found.
 "
 HC,s6_sub-100036_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100036\eeg\s6_sub-100036_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100036\eeg\s6_sub-100036_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -161,12 +161,12 @@ HC,s6_sub-100036_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100036\eeg\s6_sub-100036_rs_eeg.fdt not found.
 "
 HC,s6_sub-100039_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100039\eeg\s6_sub-100039_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100039\eeg\s6_sub-100039_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -184,12 +184,12 @@ HC,s6_sub-100039_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100039\eeg\s6_sub-100039_rs_eeg.fdt not found.
 "
 HC,s6_sub-100040_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100040\eeg\s6_sub-100040_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100040\eeg\s6_sub-100040_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -207,12 +207,12 @@ HC,s6_sub-100040_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100040\eeg\s6_sub-100040_rs_eeg.fdt not found.
 "
 HC,s6_sub-100041_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100041\eeg\s6_sub-100041_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100041\eeg\s6_sub-100041_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -230,12 +230,12 @@ HC,s6_sub-100041_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100041\eeg\s6_sub-100041_rs_eeg.fdt not found.
 "
 HC,s6_sub-100042_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100042\eeg\s6_sub-100042_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100042\eeg\s6_sub-100042_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -253,12 +253,12 @@ HC,s6_sub-100042_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100042\eeg\s6_sub-100042_rs_eeg.fdt not found.
 "
 HC,s6_sub-100044_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100044\eeg\s6_sub-100044_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100044\eeg\s6_sub-100044_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -276,12 +276,12 @@ HC,s6_sub-100044_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100044\eeg\s6_sub-100044_rs_eeg.fdt not found.
 "
 HC,s6_sub-100045_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100045\eeg\s6_sub-100045_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100045\eeg\s6_sub-100045_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
@@ -299,12 +299,12 @@ HC,s6_sub-100045_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\datas
 FileNotFoundError: File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100045\eeg\s6_sub-100045_rs_eeg.fdt not found.
 "
 HC,s6_sub-100046_rs_eeg.set,C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100046\eeg\s6_sub-100046_rs_eeg.set,File C:\Users\tiago\Downloads\Dataset_EEG_Alzheimer\dataset_eeg_hc\CL\sub-100046\eeg\s6_sub-100046_rs_eeg.fdt not found.,"Traceback (most recent call last):
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 172, in <module>
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 119, in <module>
     raw = carregar_raw_seguro(arq)
           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 87, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 64, in carregar_raw_seguro
     raise e
-  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_9408\642752865.py"", line 68, in carregar_raw_seguro
+  File ""C:\Users\tiago\AppData\Local\Temp\ipykernel_16264\3291700213.py"", line 50, in carregar_raw_seguro
     return mne.io.read_raw_eeglab(str(arq_path), preload=True, verbose=False)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""C:\Users\tiago\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mne\io\eeglab\eeglab.py"", line 329, in read_raw_eeglab
