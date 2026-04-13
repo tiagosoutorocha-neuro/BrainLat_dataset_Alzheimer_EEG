@@ -269,11 +269,8 @@ These values suggest that the mistakes are not random: false positives and false
 The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO folds.
 
 ### Global SHAP importance ranking
-<<<<<<< HEAD
-=======
 
 ![Importância das Features SHAP](assets/Importancia_Features _SHAP.png) 
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
 
 1. `Rel_Theta_mean` — **0.0680**
 2. `Razao_Theta_Alpha` — **0.0660**
