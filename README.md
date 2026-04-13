@@ -270,7 +270,7 @@ The XAI stage uses **Random Forest** and aggregates SHAP values across LOSO fold
 
 ### Global SHAP importance ranking
 
-![Importância das Features SHAP](assets/Importancia_Features _SHAP.png) 
+![Importância das Features SHAP](assets/Importancia_Features_SHAP.png)
 
 1. `Rel_Theta_mean` — **0.0680**
 2. `Razao_Theta_Alpha` — **0.0660**
