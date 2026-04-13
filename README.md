@@ -406,11 +406,3 @@ At the end of execution, the notebooks produce:
 <<<<<<< HEAD
 
 ---
-
-## Citation
-
-If you use this project in a report or paper, please cite the BrainLat dataset article:
-
-https://doi.org/10.1038/s41597-023-02806-8
-=======
->>>>>>> e09204997cab0658c3e0e8b06cb414a18f3ffdf7
